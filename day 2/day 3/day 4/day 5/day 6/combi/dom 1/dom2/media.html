@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LayOut</title>
+        <style>
+            body{
+                background-color: rgb(14,14,14);
+            }
+            #head{
+                background-color: rgb(255,255,255);
+                width:90%;
+                margin:auto;
+                margin-top:100px;
+                display:grid;
+                grid-template-columns: repeat(12,1fr);
+                grid-template-rows: 100px 250px;
+                grid-gap:25px;
+                grid-template-areas: 
+                "n n n n n n n n n n n n"
+                "b1 b1 b1 b2 b2 b2 b3 b3 b3 b4 b4 b4";
+                padding:25px;
+                
+            }
+            @media only screen and (min-width:0px) and (max-width:320px) {
+                #head{
+                    grid-template-rows: 50px 100px 100px 100px 100px;
+                    grid-template-areas: 
+                    "n n n n n n n n n n n n"
+                    "b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1 b1"
+                    "b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2 b2"
+                    "b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3 b3"
+                    "b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 b4 b4";
+                }
+                
+                
+            }
+            @media only screen and (min-width:321px) and (max-width:720px) {
+                #head{
+                    
+                    grid-template-rows: 100px 200px 200px;
+                    grid-template-areas: 
+                    "n n n n n n n n n n n n"
+                    "b1 b1 b1 b1 b1 b1 b3 b3 b3 b3 b3 b3"
+                    "b2 b2 b2 b2 b2 b2 b4 b4 b4 b4 b4 b4";  
+                }
+            }
+            .nav{
+                grid-area: n;
+                background-color:yellow;
+            }
+            .b1{
+                grid-area: b1;
+                background-color:rgb(255,0,0);
+            }
+            .b2{
+                grid-area: b2;
+                background-color:rgb(0,255,42);
+            }
+            .b3{
+                grid-area: b3;
+                background-color: rgb(87,99,238);
+            }
+            .b4{
+                grid-area: b4;
+                background-color: rgb(152,152,152);
+            }
+            p{
+                font-size: 50px;
+                margin:10px 0 0 20px;
+                font-family: sans-serif;
+
+            }
+            .p1{
+                font-family: sans-serif;
+                font-size: 30px;
+                color: gray;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="head">
+            <div class="nav"><p>Navigation</p></div>
+            <div class="b1"><p class=p1>Box1</p></div>
+            <div class="b2"><p class=p1>Box2</p></div>
+            <div class="b3"><p class=p1>Box3</p></div>
+            <div class="b4"><p class=p1>Box4</p></div>
+        </div>
+    </body>
+</html>

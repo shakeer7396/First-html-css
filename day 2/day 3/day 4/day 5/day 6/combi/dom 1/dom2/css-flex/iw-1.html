@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        #container{
+            display:flex;
+            background-color:black;
+            color:white;
+            height:50px;
+            padding:25px 0 0 20px;
+        }
+        .start{
+            width:70%;
+        }
+        .end{
+            display:flex;
+            justify-content:space-around;
+            width:30%;
+
+        }
+        select{
+            background-color:rgb(28,41,56);
+            color:white;
+            border:0;
+        }
+
+    </style>
+</head>
+<body>
+   <div id="container">
+       <div class="start">MEGAWIDTH</div>
+       <div class="end">
+           <div>Home</div>
+           <div>About</div>
+           <div>Blog</div>
+       <div>
+       <select>
+           <option>Page</option>
+       </select>
+       </div>
+       </div>
+   </div> 
+</body>
+</html>

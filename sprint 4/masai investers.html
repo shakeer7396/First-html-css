@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title> Masai Investor</title>
+    <Style>
+        #main{
+            display: flex;
+        }
+        #main>.div{
+         
+           margin: 20px;
+           grid-template-columns: repeat(1,fr);
+           grid-template-rows: repeat(4,300px);
+           
+          
+
+          
+        }
+       
+        @media only screen  and(min-width:0) and(max-width:320px){
+            #main{
+                display:grid;
+                grid-template-columns:repear(1,1fr);
+                grid-template-rows: repeat(200px 200px 200px 200px);
+            }
+        }
+        @media only screen  and(min-width:331) and(max-width:620px){
+            #main{
+               display:grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(300px 300px );
+            }
+        }
+       
+        img{
+            border-radius: 1px;
+             height:300px; 
+        }
+       
+    </Style>
+</head>
+<body>
+   
+   
+    
+    
+</body>
+</html>
+<script>
+   
+    var data = [
+    {
+      
+      name: "Ankush Sachdeva",
+      image: "https://d27028dliefpk3.cloudfront.net/assets/our-investors/ankush-sachdeva-sharechat.jpg",
+      role: "Co-founder and CEO, ShareChat"
+    },
+    {
+      
+      name: "Bhanu Pratap Singh",
+      image: "https://d27028dliefpk3.cloudfront.net/assets/our-investors/bhanu-pratap-singh-sharechat.jpg",
+      role: "Co-founder and CTO, ShareChat"
+    },
+    {
+      
+      name: "Farid Ahsan",
+      image: "https://d27028dliefpk3.cloudfront.net/assets/our-investors/farid-ahsan-sharechat.png",
+      role: "Co-founder and COO, ShareChat"
+    },
+    {
+      
+        name: "Amit Kumar Agarwal",
+        image: "https://d27028dliefpk3.cloudfront.net/assets/our-investors/amit-kumar-agarwal-nobroker.jpg",
+        role: "Founder and CEO, NoBroker"
+      }
+    
+  ]
+      console.log(data);
+        var body =document.querySelector("body");
+        var maindiv=document.createElement("div");
+        maindiv.setAttribute("id","main");
+        body.append(maindiv);
+        pname();
+        function pname(){
+            data.map(function (data){
+                var div=document.createElement("div");
+                div.setAttribute("class","div");
+                var img=document.createElement("img");
+               img.setAttribute("src" ,data.image);
+               img.setAttribute("id","img");
+               var h2=document.createElement("h2");
+               h2.textContent=data.name;
+               h2.setAttribute("id","h1");
+               var x=document.createElement("p");
+                x.textContent=data.role;
+                x.setAttribute("id","x");
+                div.append(img,h2,x);
+                maindiv.append(div);
+
+
+
+            })
+    };
+</script>

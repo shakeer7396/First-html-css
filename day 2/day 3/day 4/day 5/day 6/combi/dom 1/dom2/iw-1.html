@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+button{
+    padding:10px;
+    margin:8px;
+    color:white;
+    border:0;
+    font-weight:bold;
+    border-radius:5px;
+}
+    </style>
+</head>
+<body>
+ 
+</body>
+</html>
+<script>
+    var butn1= document.createElement("button");
+    var butn2= document.createElement("button");
+    var butn3= document.createElement("button");
+    var butn4= document.createElement("button");
+    var butn5= document.createElement("button");
+    var butn6= document.createElement("button");
+
+    butn1.textContent="primary";
+    
+    butn2.textContent="Secondary";
+    
+    butn3.textContent="Success";
+    
+    butn4.textContent="Danger";
+    
+    butn5.textContent="Warning";
+    
+    butn6.textContent="info";
+   
+    butn1.style.backgroundColor="blue";
+    butn2.style.backgroundColor="grey";
+    butn3.style.backgroundColor="green";
+butn4.style.backgroundColor="red";
+butn5.style.backgroundColor="orange";
+butn6. style.backgroundColor="cyan";
+
+
+    document.querySelector("body").append(butn1,butn2,butn3,butn4,butn5,butn6);
+</script>

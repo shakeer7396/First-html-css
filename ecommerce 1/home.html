@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <style>
+        #container{
+            display:flex;
+            background-color:rgb(28,41,56);
+            color:white;
+            height:50px;
+            padding:25px 0 0 20px;
+            border-radius: 20px;
+        }
+        .left{
+            width:70%;
+        }
+        .right{
+            display:flex;
+            justify-content:space-around;
+            width:30%;
+
+        }
+        a{
+            text-decoration:none;
+            color:white;
+        }
+        /* #men,#women{
+            border:1px solid red;
+
+        } */
+
+    </style>
+</head>
+<body>
+   <div id="container">
+       <div class="left">Home</div>
+       <div class="right">
+           <div>
+               <a href="about.html">About</a>
+            </div>
+           <div id="men">Men</div>
+           <div id="women">Women</div>
+           <div onclick="window.location.href='login.html'">Login</div>
+           <div>
+               <a href="signup.html">Signup</a>
+           </div>
+       </div>
+   </div> 
+</body>
+</html>
+<script>
+    document.getElementById("men").addEventListener("click",function(){
+        window.location.href="men.html";
+    })
+    document.getElementById("women").addEventListener("click",function(){
+        window.location.href="women.html";
+    })
+    // document.getElementById("login").addEventListener("click",function(){
+    //     window.location.href="login.html";
+    // })
+</script>

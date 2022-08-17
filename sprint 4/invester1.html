@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cont{
+            display: flex;
+        }
+        #cont>.div{
+            text-align: center;
+            margin: 10px;
+            box-shadow: rgba(24,5,5,0.15)2.4px 2.4x 3.2px;
+            border-radius: 10px;
+        }
+        #y{
+            text-align: center;
+            color: rgb(14,1,1);
+        }
+        #img{
+            border-radius: 12px;
+        }
+        @media(min-width:0px) and (max-width){
+            #cont{
+                display: grid;
+                grid-template-rows: repeat(1,1fr);
+                grid-template-columns: 400px;
+            }
+        }
+        @media (min-width:376px) and (max-width:768px)
+        {
+            #cont{
+                display: grid;
+                grid-template-rows: repeat(2,1fr);
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var data=[
+        {
+            name:"Ankush Sachdeva",
+            image:"https://d27028dliefpk3.cloudfront.net/assets/our-investors/ankush-sachdeva-sharechat.jpg",
+            role:"Co-Founder and CEO,ShareChat"
+        },
+        {
+        name:"Bhanu Prathap Singh",
+        image:"https://d27028dliefpk3.cloudfront.net/assets/our-investors/bhanu-pratap-singh-sharechat.jpg",
+        role:"Co-Founder and CTO,ShareChat"
+        },
+        {
+        name:"Farid Ahsan",
+        image:"https://d27028dliefpk3.cloudfront.net/assets/our-investors/farid-ahsan-sharechat.png",
+        role:"Co-Founder and COO,ShareChat"
+        },
+        {
+            name:"Amit kumar Agarwal",
+            image:"https://d27028dliefpk3.cloudfront.net/assets/our-investors/amit-kumar-agarwal-nobroker.jpg",
+            role:"Founder and CEO,NoBroker"
+        },
+    ]
+    console.log(data)
+    var body=document.querySelector("body")
+    var maindiv=document.createElement("div")
+    maindiv.setAttribute("id","cont")
+    body.append(maindiv)
+    pname()
+    function pname(){
+        data.map(function(items){
+            var div=document.createElement("div")
+            div.setAttribute("class","div")
+            var images=document.createElement("img")
+            images.setAttribute("src",items.image)
+            images.setAttribute("id","img")
+            var h1=document.createElement("h1")
+            h1.textContent=items.name
+            h1.setAttribute("class","h1")
+            var y=document.createElement("y")
+            y.textContent=items.role
+            y.setAttribute("id","y")
+            div.append(images,h1,y)
+            maindiv.append(div)
+        })
+    }
+</script>

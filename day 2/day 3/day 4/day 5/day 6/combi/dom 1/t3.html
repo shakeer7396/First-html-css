@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        #main{
+            width:20%; 
+             /* height: 500px; */
+            /* border: 1px solid black; */
+            margin: auto;
+        }
+        #disp{
+            width:97%;
+            height:50px; 
+            font-size: 30px;
+            /* margin: 5px 0 5px 0; */
+        }
+        #button{
+            width:70px;
+            height:70px;
+            margin:2px;
+            margin:10px 0 10px 13px;
+            font-size: 20px;
+            background-color: black;
+            color: white;
+            border-radius: 7px;
+        }
+        #finput{
+            margin: 5px;
+            border: 1px solid grey;
+            border-radius: 7px;
+        }
+        #sinput{
+            /* border: 1px solid teal; */
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+        .clear{
+            width:70px;
+            height:70px;
+            margin:5px;
+            margin:10px 0 10px 13px;
+            font-size: 20px;
+            background-color: orangered;
+            color: white;
+            border-radius: 7px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <form id="cal">
+       <div id="finput"> <input id="disp" typle="text" name="display"readonly></div> 
+       <div id="sinput">
+        <input id="button" type="button" value="0" onclick="cal.disp.value+='0'"> 
+        <input id="button" type="button" value="1" onclick="cal.disp.value+='1'">
+        <input id="button" type="button" value="2" onclick="cal.disp.value+='2'">
+        <br>
+        <input id="button" type="button" value="3" onclick="cal.disp.value+='3'">
+        <input id="button" type="button" value="4" onclick="cal.disp.value+='4'">
+        <input id="button" type="button" value="5" onclick="cal.disp.value+='5'">
+        <br>
+        <input id="button" type="button" value="6" onclick="cal.disp.value+='6'">
+        <input id="button" type="button" value="7" onclick="cal.disp.value+='7'">
+        <input id="button" type="button" value="8" onclick="cal.disp.value+='8'">
+        <br>
+        <input id="button" type="button" value="9" onclick="cal.disp.value+='9'">
+        <input  class="clear" type="reset" value="Clear" onclick="cal.disp.value+=''">
+    </div>
+
+    </form>
+    </div>
+</body>
+</html>

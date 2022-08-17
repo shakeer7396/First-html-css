@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background:black;
+            
+        }
+        .main{
+            width:50%;
+            height:600px;
+            border:1px solid white;
+            margin:auto;
+            background:white;
+            align-items:center ;
+            /* justify-content:center; */
+        }
+        .flex-box{
+            display:flex;
+            /* border:1px solid red; */
+            margin:10px;
+            
+
+        }
+        .flex-box div{
+            /* border:1px solid black; */
+            /* color:white; */
+            padding:10px;
+            margin:10px;
+        }
+        /* #box1{
+            background:green;
+        } */
+        #box1>.a2 {
+            height:80px;
+            flex-grow:4;
+            background:green;
+                    }
+                    #box1>.a1 {
+            height:80px;
+            flex-grow:1;
+            background:green;
+                    }
+                    #box1>.a3 {
+            height:80px;
+            flex-grow:1;
+            background:green;
+                    }
+         #box2>.b1 {
+             height:80px;
+             flex-grow:4;
+             background:green;
+         }
+         #box2>.b2 {
+             height:80px;
+             flex-grow:1;
+             background:green;
+         }
+         #box2>.b3 {
+             height:80px;
+             flex-grow:1;
+             background:green;
+         }
+         #box3>.c1 {
+             height:80px;
+             flex-grow:1;
+             background:green;
+         }
+         #box3>.c2 {
+             height:80px;
+             flex-grow:1;
+             background:green;
+         }
+         #box3>.c3 {
+             height:80px;
+             flex-grow:4;
+             background:green;
+         }                                                            
+                    
+
+
+
+    </style>
+</head>
+<body>
+    <div id="container" class="main">
+        
+    <div class="flex-box" id="box1">
+        <div class="a1"></div>
+        <div class="a2"></div>
+        <div class="a3"></div>
+       
+
+    </div>
+    <div class="flex-box" id="box2">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+       
+
+    </div>
+    <div class="flex-box" id="box3">
+        <div class="c1"></div>
+        <div class="c2"></div>
+        <div class="c3"></div>
+       
+
+    </div>
+</div>
+</body>
+</html>
