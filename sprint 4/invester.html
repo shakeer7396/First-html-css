@@ -73,7 +73,7 @@
     
   ]
   console.log(data)
-var body=document.querySelecter("body")
+var body=document.querySelector("body")
 var headdiv=document.createElement("div")
 headdiv.setAttribute("id","cont")
 body.append(headdiv)
@@ -88,7 +88,7 @@ function pname(){
         var h1=document.createElement("h1")
         h1.textContent=items.name
         h1.setAttribute("class","h1")
-        var y=document.createElements("y")
+        var y=document.createElement("y")
         y.textContent=items.role
         y.setAttribute("id","y")
         div.append(images,h1,y)
