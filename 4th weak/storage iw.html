@@ -33,7 +33,8 @@
 
 <script>
     document.querySelector("form").addEventListener("submit",todoList);
-    var todoArr=[];
+    var todoArr=JSON.parse(localStorage.getItem("todoTodo"));
+    createTable(todoArr)
 
     function todoList(event){
         event.preventDefault();
@@ -43,6 +44,8 @@
     
     var taskList= { itemName:item,itemQty:qty };
     todoArr.push(taskList);
+    //Adding data to local storage
+    localStorage.setItem("todoTodo",JSON.stringify(todoArr))
     createTable(todoArr);
     }
 
@@ -52,7 +55,7 @@
            var tr=document.createElement("tr");
 
            var td1=document.createElement("td");
-           td1.textContent=elem.itemNames;
+           td1.textContent=elem.itemName;
 
            var td2=document.createElement("td");
            td2.textContent=elem.itemQty;
