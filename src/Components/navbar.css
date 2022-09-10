@@ -1,0 +1,22 @@
+
+.navbar2{
+    height: 50px;
+    background-color:greenyellow;
+    /* color:white; */
+    position: fixed;
+    z-index: 0;
+    width: 100%;
+    margin-top: -0px;
+    
+}
+.head{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+Link{
+    margin-top: 100px;
+}
+
+
